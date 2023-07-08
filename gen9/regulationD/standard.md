@@ -215,5 +215,76 @@ Adamant Nature
 - Bulk Up  
 - Protect  
 
+```
+
+# standard 4
+```
+Ceruledge @ Assault Vest  
+Ability: Flash Fire  
+Level: 50  
+Tera Type: Grass  
+EVs: 252 HP / 76 Atk / 156 Def / 4 SpD / 20 Spe  
+Adamant Nature  
+- Bitter Blade  
+- Shadow Sneak  
+- Tera Blast  
+- Brick Break  
+
+Cresselia @ Safety Goggles  
+Ability: Levitate  
+Level: 50  
+Tera Type: Fairy  
+EVs: 252 HP / 252 Def / 4 SpA  
+Bold Nature  
+IVs: 0 Atk  
+- Moonblast  
+- Trick Room  
+- Lunar Blessing  
+- Ally Switch  
+
+Ursaluna @ Flame Orb  
+Ability: Guts  
+Level: 50  
+Tera Type: Water  
+EVs: 252 HP / 252 Atk / 4 SpD  
+Adamant Nature  
+- Facade  
+- Earthquake  
+- Headlong Rush  
+- Protect  
+
+Annihilape @ Leftovers  
+Ability: Defiant  
+Level: 50  
+Tera Type: Water  
+EVs: 252 HP / 212 Atk / 44 Spe  
+Adamant Nature  
+- Rage Fist  
+- Drain Punch  
+- Bulk Up  
+- Protect  
+
+Iron Hands @ Sitrus Berry  
+Ability: Quark Drive  
+Level: 50  
+Tera Type: Grass  
+EVs: 252 Atk / 252 SpD / 4 Spe  
+Adamant Nature  
+- Drain Punch  
+- Thunder Punch  
+- Swords Dance  
+- Detect  
+
+Regieleki @ Focus Sash  
+Ability: Transistor  
+Level: 50  
+Tera Type: Electric  
+EVs: 4 HP / 252 SpA / 252 Spe  
+Timid Nature  
+IVs: 0 Atk  
+- Thunderbolt  
+- Electroweb  
+- Volt Switch  
+- Protect  
 
 ```
