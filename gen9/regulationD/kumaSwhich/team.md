@@ -44,7 +44,7 @@ Adamant Nature
 - Outrage  
 - Tera Blast  
 - Extreme Speed  
-- Aqua Jet  
+- Stomping Tantrum  
 
 Cresselia @ Rocky Helmet  
 Ability: Levitate  
@@ -67,5 +67,5 @@ Brave Nature
 - Facade  
 - Earthquake  
 - Ice Punch  
-- Protect
+- Protect  
 ```
