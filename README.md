@@ -11,4 +11,4 @@
 
 # ブログ 
 良ければチェックしていってね  
-https://blog.yasucha.com/
+[https://blog.yasucha.com/](https://blog.yasucha.com/){:target="_blank"}
