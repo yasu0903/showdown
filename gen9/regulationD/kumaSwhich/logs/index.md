@@ -1,0 +1,9 @@
+# ログ一覧
+[1. 初手降参](./Gen9VGC2023RegulationD-2023-07-10-fckfluttermane-yasu1000.html)
+[2. ](./Gen9VGC2023RegulationD-2023-07-10-lagwars-yasu1000.html)
+[3. ](./Gen9VGC2023RegulationD-2023-07-10-niubmaccio-yasu1000.html)
+[4. ](./Gen9VGC2023RegulationD-2023-07-10-rapid117-yasu1000.html)
+[5. ](./Gen9VGC2023RegulationD-2023-07-10-snipedrone-yasu1000.html)
+[6. ](./Gen9VGC2023RegulationD-2023-07-10-yasu1000-commonanomoly.html)
+[7. ](./Gen9VGC2023RegulationD-2023-07-10-yasu1000-commonanomoly.html)
+[8. ](./Gen9VGC2023RegulationD-2023-07-11-fgggfgvv-yasu1000.html)
