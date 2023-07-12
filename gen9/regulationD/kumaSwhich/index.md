@@ -1,5 +1,7 @@
 # standard kuma cresselia
-[ガチグマクレセスイッチ](https://pokepast.es/b83113fb84a2910b)
+[ガチグマクレセスイッチ](https://pokepast.es/b83113fb84a2910b)  
+[対戦ログ](./logs/index.md)  
+
 ```
 Flutter Mane @ Sitrus Berry  
 Ability: Protosynthesis  
