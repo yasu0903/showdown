@@ -1,4 +1,5 @@
 # standard kuma cresselia
+[ガチグマクレセスイッチ](https://pokepast.es/b83113fb84a2910b)
 ```
 Flutter Mane @ Sitrus Berry  
 Ability: Protosynthesis  
@@ -15,7 +16,7 @@ IVs: 0 Atk
 Chi-Yu @ Focus Sash  
 Ability: Beads of Ruin  
 Level: 50  
-Tera Type: Grass  
+Tera Type: Ghost  
 EVs: 4 HP / 252 SpA / 252 Spe  
 Timid Nature  
 IVs: 0 Atk  
@@ -62,8 +63,8 @@ Ursaluna @ Flame Orb
 Ability: Guts  
 Level: 50  
 Tera Type: Water  
-EVs: 252 HP / 252 Atk / 4 Def  
-Brave Nature  
+EVs: 252 HP / 148 Atk / 100 Def / 4 SpD / 4 Spe  
+Adamant Nature  
 - Facade  
 - Earthquake  
 - Ice Punch  
