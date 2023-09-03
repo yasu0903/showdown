@@ -72,3 +72,75 @@ Adamant Nature
 - Ice Punch  
 - Protect  
 ```
+
+```
+
+Flutter Mane @ Sitrus Berry  
+Ability: Protosynthesis  
+Level: 50  
+Tera Type: Grass  
+EVs: 196 HP / 252 Def / 36 SpA / 4 SpD / 20 Spe  
+Modest Nature  
+IVs: 0 Atk  
+- Dazzling Gleam  
+- Shadow Ball  
+- Trick Room  
+- Protect  
+
+Chien-Pao @ Life Orb  
+Ability: Sword of Ruin  
+Level: 50  
+Tera Type: Ghost  
+EVs: 4 HP / 252 Atk / 252 Spe  
+Jolly Nature  
+- Ice Spinner  
+- Sucker Punch  
+- Ice Shard  
+- Protect  
+
+Cresselia @ Rocky Helmet  
+Ability: Levitate  
+Level: 50  
+Tera Type: Fairy  
+EVs: 252 HP / 156 Def / 100 SpD  
+Relaxed Nature  
+IVs: 0 Atk  
+- Moonblast  
+- Lunar Blessing  
+- Trick Room  
+- Ally Switch  
+
+Ursaluna @ Flame Orb  
+Ability: Guts  
+Level: 50  
+Tera Type: Water  
+EVs: 252 HP / 148 Atk / 100 Def / 4 SpD / 4 Spe  
+Adamant Nature  
+- Facade  
+- Headlong Rush  
+- Bulk Up  
+- Protect  
+
+Volcarona @ Leftovers  
+Ability: Flame Body  
+Level: 50  
+Tera Type: Grass  
+EVs: 252 HP / 212 Def / 44 Spe  
+Modest Nature  
+IVs: 0 Atk  
+- Heat Wave  
+- Giga Drain  
+- Quiver Dance  
+- Protect  
+
+Rillaboom @ Assault Vest  
+Ability: Grassy Surge  
+Level: 50  
+Tera Type: Fire  
+EVs: 252 HP / 252 Atk / 4 SpD  
+Adamant Nature  
+- Wood Hammer  
+- U-turn  
+- Brick Break  
+- Fake Out  
+```
