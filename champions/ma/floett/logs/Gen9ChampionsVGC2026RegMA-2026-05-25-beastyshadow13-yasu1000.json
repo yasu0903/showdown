@@ -1,0 +1,53 @@
+{
+  "result": "win",
+  "my_lead": [
+    "Basculegion",
+    "Floette-Eternal"
+  ],
+  "opponent": {
+    "name": "Beastyshadow13",
+    "party": [
+      "Chandelure",
+      "Heliolisk",
+      "Milotic",
+      "Kommo-o",
+      "Aerodactyl",
+      "Farigiraf"
+    ],
+    "selected": [
+      "Aerodactyl",
+      "Heliolisk",
+      "Chandelure",
+      "Kommo-o"
+    ],
+    "lead": [
+      "Aerodactyl",
+      "Heliolisk"
+    ],
+    "archetype": "テールウインド"
+  },
+  "key_moments": [
+    {
+      "turn": 1,
+      "matchup": [
+        "Basculegion",
+        "Aerodactyl"
+      ],
+      "situation": "相手が追い風としっぽきりで盤面を整えようとした初手、イダイトウのアクアブレイクでメガプテラを即座に撃破。",
+      "note": "相手の素早さ操作の要であるメガ進化ポケモンを1ターン目に排除したことで、追い風下での一方的な展開を防いだ。"
+    },
+    {
+      "turn": 4,
+      "matchup": [
+        "Floette-Eternal",
+        "Kommo-o"
+      ],
+      "situation": "イッカネズミの「このゆびとまれ」でジャラランガの攻撃を誘導しつつ、メガフラエッテのマジカルシャインで相手2体を同時に処理。",
+      "note": "ソウルビートで全能力が上がったジャラランガに対し、特性フェアリーオーラによる強化マジカルシャインで隙を与えず一掃した。"
+    }
+  ],
+  "summary": "相手の「追い風＋しっぽきり」という強力なセットアップに対し、初手でメガプテラを落としたことで主導権を渡しませんでした。中盤はイッカネズミの「フェイント」で削れたエリキテルを確実に処理し、最後は「このゆびとまれ」で味方を守るサポートが完璧に機能しました。メガフラエッテの特性による圧倒的な火力で、積み技を使用した相手のエースを制圧して勝利を収めました。",
+  "title": "メガフラエッテの火力で圧倒！展開重視の追い風パーティを制す",
+  "file": "Gen9ChampionsVGC2026RegMA-2026-05-25-beastyshadow13-yasu1000",
+  "date": "2026-05-25"
+}

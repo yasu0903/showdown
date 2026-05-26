@@ -1,0 +1,62 @@
+{
+  "result": "win",
+  "my_lead": [
+    "Floette-Eternal",
+    "Basculegion"
+  ],
+  "opponent": {
+    "name": "hypocia",
+    "party": [
+      "Politoed",
+      "Sneasler",
+      "Volcarona",
+      "Gardevoir",
+      "Kingambit",
+      "Garchomp"
+    ],
+    "selected": [
+      "Volcarona",
+      "Gardevoir",
+      "Sneasler",
+      "Kingambit"
+    ],
+    "lead": [
+      "Volcarona",
+      "Gardevoir"
+    ],
+    "archetype": "スタン"
+  },
+  "key_moments": [
+    {
+      "turn": 1,
+      "matchup": [
+        "Basculegion",
+        "Volcarona"
+      ],
+      "situation": "イダイトウ（Basculegion）がアクアブレイクでウルガモスを1撃で倒し、相手の並びを崩した場面。",
+      "note": "初手から相手の重要なアタッカーを処理できたことで、盤面のコントロールが容易になった。"
+    },
+    {
+      "turn": 3,
+      "matchup": [
+        "Maushold",
+        "Basculegion"
+      ],
+      "situation": "イッカネズミの「このゆびとまれ」で攻撃を引きつけ、イダイトウがメガサーナイトを「おはかまいり」で倒した場面。",
+      "note": "サポートを駆使してエースであるイダイトウを動かし、相手の最大火力を排除した重要なターン。"
+    },
+    {
+      "turn": 6,
+      "matchup": [
+        "Dragonite",
+        "Kingambit"
+      ],
+      "situation": "カイリューが「けたぐり」で相手の最後の1体であるドドゲザンを突破し、勝利を確定させた場面。",
+      "note": "ヨプのみで半減されたものの、削りきれる範囲まで追い込んでいた判断が勝負を決めた。"
+    }
+  ],
+  "summary": "序盤にイダイトウがウルガモスを即座に処理したことで、数的優位とテンポを確保しました。中盤はイッカネズミのサポートを受けながら、イダイトウの「おはかまいり」で相手のメガサーナイトを突破し、主導権を渡しませんでした。最終盤はカイリューのしんそくとけたぐりによる一貫性を押し付け、相手の残り2体を着実に処理して勝利を収めました。",
+  "title": "VSメガサーナイトスタン イダイトウの突破力とサポートの連携で完勝",
+  "file": "Gen9ChampionsVGC2026RegMA-2026-05-25-hypocia-yasu1000",
+  "date": "2026-05-25"
+}

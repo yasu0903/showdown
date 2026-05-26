@@ -1,0 +1,53 @@
+{
+  "result": "lose",
+  "my_lead": [
+    "Basculegion",
+    "Maushold-Four"
+  ],
+  "opponent": {
+    "name": "redheroplays",
+    "party": [
+      "Golurk",
+      "Gallade",
+      "Zoroark-Hisui",
+      "Archaludon",
+      "Araquanid",
+      "Sylveon"
+    ],
+    "selected": [
+      "Zoroark-Hisui",
+      "Araquanid",
+      "Archaludon",
+      "Gallade"
+    ],
+    "lead": [
+      "Zoroark-Hisui",
+      "Araquanid"
+    ],
+    "archetype": "スタン"
+  },
+  "key_moments": [
+    {
+      "turn": 1,
+      "matchup": [
+        "Basculegion",
+        "Zoroark-Hisui"
+      ],
+      "situation": "相手のエルレイド（化けたゾロアーク）の『うらみつらみ』により、イダイトウが致命傷を負い、さらにオニシズクモの追撃で1ターン目に倒された場面。",
+      "note": "ゾロアークの特性『イリュージョン』を見抜けず、メインアタッカーを無償で失ったことが試合全体に大きく響いた。"
+    },
+    {
+      "turn": 4,
+      "matchup": [
+        "Floette-Mega",
+        "Archaludon"
+      ],
+      "situation": "メガフラエッテがブリジュラスの『ラスターカノン』とエルレイドの集中攻撃を受けて倒された場面。",
+      "note": "隣のドドゲザンが守るを選択している間に、貴重なフェアリー打点であるフラエッテが処理され、数的不利が決定定的となった。"
+    }
+  ],
+  "summary": "初手のゾロアークの『イリュージョン』への対応を誤り、エースのイダイトウを1ターン目に失ったことが最大の敗因です。ネズミザンのサポートを活かしてメガフラエッテで反撃を試みましたが、相手のブリジュラスとエルレイドの並びに対して打点が不足していました。最終的に、ドドゲザンがエルレイドの『せいなるつるぎ』に縛られる形となり、押し切られる形で敗北しました。",
+  "title": "ゾロアークの幻惑に翻弄され、エースを早期喪失した一戦",
+  "file": "Gen9ChampionsVGC2026RegMA-2026-05-25-yasu1000-redheroplays",
+  "date": "2026-05-25"
+}

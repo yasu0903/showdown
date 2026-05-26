@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 """Battle log analyzer: HTML → JSON + Markdown using Gemini API"""
 
+import argparse
 import json
 import os
 import re
@@ -189,6 +190,35 @@ def regenerate_index(deck_dir: Path, results: list):
 
 
 def main():
+    parser = argparse.ArgumentParser(
+        prog="analyze.py",
+        description=(
+            "Pokemon Showdown のダブルバトル（VGC）対戦ログ（HTML）を\n"
+            "Gemini API で解析し、JSON と Markdown を生成します。\n\n"
+            "対象ディレクトリに含まれる全 HTML ファイルを処理し、\n"
+            "同名の .json / .md を出力します。すでに .json が存在する場合はスキップ。\n"
+            "処理後、デッキディレクトリ直下の index.md を自動更新します。"
+        ),
+        formatter_class=argparse.RawDescriptionHelpFormatter,
+        epilog=(
+            "使用例:\n"
+            "  python analyze.py decks/               # decks/ 配下の全 logs/ を処理\n"
+            "  python analyze.py decks/myteam/logs/   # 特定の logs/ を処理\n\n"
+            "環境変数:\n"
+            "  GEMINI_API_KEY   Gemini API キー（必須）"
+        ),
+    )
+    parser.add_argument(
+        "target_dir",
+        metavar="<target_dir>",
+        help=(
+            "処理対象のディレクトリ。"
+            "logs/ ディレクトリを直接指定するか、"
+            "その親ディレクトリを指定すると配下の全 logs/ を再帰的に処理します。"
+        ),
+    )
+    args = parser.parse_args()
+
     api_key = os.environ.get("GEMINI_API_KEY")
     if not api_key:
         print("Error: GEMINI_API_KEY が設定されていません", file=sys.stderr)
@@ -197,11 +227,7 @@ def main():
     genai.configure(api_key=api_key)
     model = genai.GenerativeModel(MODEL_NAME)
 
-    if len(sys.argv) < 2:
-        print("Usage: python analyze.py <logs_dir>", file=sys.stderr)
-        sys.exit(1)
-
-    target = Path(sys.argv[1]).resolve()
+    target = Path(args.target_dir).resolve()
     if not target.is_dir():
         print(f"Error: ディレクトリが見つかりません: {target}", file=sys.stderr)
         sys.exit(1)

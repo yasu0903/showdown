@@ -1,0 +1,53 @@
+{
+  "result": "win",
+  "my_lead": [
+    "Floette-Eternal",
+    "Basculegion"
+  ],
+  "opponent": {
+    "name": "Hirokol",
+    "party": [
+      "Milotic",
+      "Sneasler",
+      "Aerodactyl",
+      "Archaludon",
+      "Farigiraf",
+      "Krookodile"
+    ],
+    "selected": [
+      "Krookodile",
+      "Archaludon",
+      "Farigiraf",
+      "Milotic"
+    ],
+    "lead": [
+      "Krookodile",
+      "Archaludon"
+    ],
+    "archetype": "スタン"
+  },
+  "key_moments": [
+    {
+      "turn": 1,
+      "matchup": [
+        "Floette-Eternal",
+        "Krookodile"
+      ],
+      "situation": "フラエッテがメガシンカし、フェアリーオーラ込みのマジカルシャインで相手のワルビアルを一撃で倒す。",
+      "note": "初手で相手の威嚇枠を排除しつつ、隣のブリジュラスにも大ダメージを与えたことで、試合の主導権を完全に握った。"
+    },
+    {
+      "turn": 3,
+      "matchup": [
+        "Floette-Eternal",
+        "Archaludon"
+      ],
+      "situation": "フラエッテがムーンフォースで残っていたブリジュラスを突破する。",
+      "note": "フラエッテにとって最大の脅威であった鋼タイプのブリジュラスを迅速に処理したことで、勝利を決定づけた。"
+    }
+  ],
+  "summary": "初手のメガフラエッテによる圧倒的な火力が勝因となった試合。ワルビアルを1ターン目で突破したことで相手のサイクルを崩し、イッカネズミのサポートを受けながら着実に相手を削る展開を作れた。最後は火力が削がれたドドゲザンでもリキキリンを倒しきり、盤面を制圧して相手の投了を誘った。",
+  "title": "VSスタン メガフラエッテの超火力による初手制圧とテンポ維持",
+  "file": "Gen9ChampionsVGC2026RegMA-2026-05-25-yasu1000-hirokol",
+  "date": "2026-05-25"
+}
