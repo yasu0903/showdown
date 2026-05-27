@@ -26,19 +26,27 @@ PROMPT = """\
 
 {{
   "result": "win" または "lose",
+  "turns_total": 総ターン数（整数）,
   "my_lead": ["先発1", "先発2"],
+  "my_selected": ["選出した4体の英語名（登場順）"],
+  "win_condition": "勝因を一言で（日本語）",
+  "lose_condition": "敗因を一言で（日本語）",
   "opponent": {{
     "name": "相手プレイヤー名",
     "party": ["全6体の英語名"],
     "selected": ["選出した4体の英語名（登場順）"],
     "lead": ["相手の先発2体の英語名"],
-    "archetype": "{archetypes} のいずれか1つ"
+    "archetype": "{archetypes} のいずれか1つ",
+    "key_pokemon": ["相手構築の主軸ポケモン（1〜2体）の英語名"],
+    "strategy": "相手の戦略を一言で（日本語）"
   }},
   "key_moments": [
     {{
       "turn": ターン番号（整数）,
       "matchup": ["関与した主要ポケモンの英語名（1〜2体）"],
-      "situation": "場面の状況（日本語、1〜2文）",
+      "board_state": "そのターン開始時の場の状態（残数・HP・状態異常など、日本語、1文）",
+      "my_action": "{player_name} が取った行動（日本語、1文）",
+      "opponent_action": "相手が取った行動（日本語、1文）",
       "note": "なぜその場面が重要だったか（日本語、1〜2文）"
     }}
   ],
@@ -46,17 +54,18 @@ PROMPT = """\
   "title": "試合タイトル（例：VSアーカルゴンスタン 初手から主導権を握る）"
 }}
 
-## archetype の判断基準
-- トリル：トリックルームを展開軸とする
-- 晴れ・雨・雪・砂：該当天候を軸とする
-- テールウインド：テール風でのスピードコントロールを軸とする
-- 積みサポート：フォローミー・いかりのこな等のサポートと積み技の組み合わせを軸とする
-- スタン：上記に当てはまらないバランス型
-
-## key_moments の選び方（重要）
-- 択の正誤を評価するのではなく、強い意思決定が必要だった場面を選ぶ
-- ポケモンの対面が試合の流れを左右した場面を選ぶ
-- 1試合につき1〜3個
+## 補足
+- win_condition / lose_condition：結果が win なら lose_condition は null、lose なら win_condition は null にする
+- archetype の判断基準
+  - トリル：トリックルームを展開軸とする
+  - 晴れ・雨・雪・砂：該当天候を軸とする
+  - テールウインド：テール風でのスピードコントロールを軸とする
+  - 積みサポート：フォローミー・いかりのこな等のサポートと積み技の組み合わせを軸とする
+  - スタン：上記に当てはまらないバランス型
+- key_moments の選び方
+  - 択の正誤を評価するのではなく、強い意思決定が必要だった場面を選ぶ
+  - ポケモンの対面が試合の流れを左右した場面を選ぶ
+  - 1試合につき1〜3個
 """
 
 
@@ -83,30 +92,36 @@ def call_llm(log_data: str, model) -> dict:
         battle_log=log_data,
         archetypes="・".join(ARCHETYPES),
     )
-    response = model.generate_content(prompt)
-    text = response.text.strip()
-    text = re.sub(r"^```(?:json)?\n?", "", text)
-    text = re.sub(r"\n?```$", "", text)
-    return json.loads(text)
+    response = model.generate_content(
+        prompt,
+        generation_config=genai.GenerationConfig(
+            response_mime_type="application/json",
+        ),
+    )
+    return json.loads(response.text)
 
 
 def to_markdown(data: dict, html_name: str) -> str:
     result_label = "勝利" if data["result"] == "win" else "敗北"
-    my_lead = " / ".join(data["my_lead"])
     opp = data["opponent"]
+    my_selected = " / ".join(data.get("my_selected", []))
+    my_lead = " / ".join(data["my_lead"])
+    condition = data.get("win_condition") or data.get("lose_condition") or ""
+    condition_label = "勝因" if data["result"] == "win" else "敗因"
 
     lines = [
         f"# {data['title']}",
         "",
-        f"**結果**：{result_label}  ",
-        f"**相手**：{opp['name']}  ",
-        f"**相手構築タイプ**：{opp['archetype']}  ",
+        f"**結果**：{result_label}　**{condition_label}**：{condition}  ",
+        f"**相手**：{opp['name']}　**構築タイプ**：{opp['archetype']}  ",
+        f"**相手の戦略**：{opp.get('strategy', '')}  ",
+        f"**相手の主軸**：{' / '.join(opp.get('key_pokemon', []))}  ",
         "",
         "## 選出",
         "",
         "| | 6体 | 選出 | 先発 |",
         "|---|---|---|---|",
-        f"| 自分 | — | — | {my_lead} |",
+        f"| 自分 | — | {my_selected} | {my_lead} |",
         f"| 相手 | {' / '.join(opp['party'])} | {' / '.join(opp['selected'])} | {' / '.join(opp['lead'])} |",
         "",
         "## 試合概要",
@@ -122,7 +137,9 @@ def to_markdown(data: dict, html_name: str) -> str:
         lines += [
             f"### ターン {km['turn']} — {matchup}",
             "",
-            f"**状況**：{km['situation']}  ",
+            f"**場の状態**：{km.get('board_state', '')}  ",
+            f"**自分の行動**：{km.get('my_action', '')}  ",
+            f"**相手の行動**：{km.get('opponent_action', '')}  ",
             f"**重要な理由**：{km['note']}  ",
             "",
         ]
@@ -135,13 +152,13 @@ def to_markdown(data: dict, html_name: str) -> str:
     return "\n".join(lines)
 
 
-def process_logs_dir(logs_dir: Path, model) -> list:
+def process_logs_dir(logs_dir: Path, model, force: bool = False) -> list:
     results = []
     for html_path in sorted(logs_dir.glob("*.html")):
         json_path = html_path.with_suffix(".json")
         md_path = html_path.with_suffix(".md")
 
-        if json_path.exists():
+        if json_path.exists() and not force:
             results.append(json.loads(json_path.read_text(encoding="utf-8")))
             print(f"  skip (分析済み): {html_path.name}")
             continue
@@ -217,6 +234,17 @@ def main():
             "その親ディレクトリを指定すると配下の全 logs/ を再帰的に処理します。"
         ),
     )
+    parser.add_argument(
+        "--force",
+        action="store_true",
+        help="既存の JSON・MD があっても上書きして再生成する。",
+    )
+    parser.add_argument(
+        "--model",
+        default=MODEL_NAME,
+        metavar="<model>",
+        help=f"使用する Gemini モデル名。デフォルト: {MODEL_NAME}",
+    )
     args = parser.parse_args()
 
     api_key = os.environ.get("GEMINI_API_KEY")
@@ -225,7 +253,8 @@ def main():
         sys.exit(1)
 
     genai.configure(api_key=api_key)
-    model = genai.GenerativeModel(MODEL_NAME)
+    model = genai.GenerativeModel(args.model)
+    print(f"model: {args.model}")
 
     target = Path(args.target_dir).resolve()
     if not target.is_dir():
@@ -237,7 +266,7 @@ def main():
 
     for logs_dir in sorted(logs_dirs):
         print(f"\n{logs_dir}")
-        results = process_logs_dir(logs_dir, model)
+        results = process_logs_dir(logs_dir, model, force=args.force)
         if results:
             regenerate_index(logs_dir.parent, results)
 
